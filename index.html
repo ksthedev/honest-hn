@@ -1,9 +1,161 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HoNest — HN</title><link rel="stylesheet" href="style.css"></head><body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HoNest — HN</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
 <main>
-<section id="auth" class="screen"><div class="logo">HN</div><h1>We trust that you are honest.</h1><p>No passwords. Just trust.</p><form id="login"><label>Username</label><input id="loginUser" required><button>LOGIN</button><button type="button" class="link" id="signupOpen">Doesn't have an account? <b>Create one</b></button></form></section>
-<section id="signup" class="screen hidden"><div class="logo">HN</div><h1>Create your completely secure account</h1><form id="signupForm"><label>Name</label><input id="name" required maxlength="50"><label>Username</label><input id="username" required pattern="[A-Za-z0-9_]+" maxlength="30"><button>SIGN-IN</button><button type="button" class="link" id="back">‹ Back</button></form></section>
-<section id="app" class="hidden"><nav><div class="logo small">HN</div><button class="ghost" id="logout">LOG OUT</button></nav><div class="layout"><aside><div id="profile"></div><button id="editProfile">EDIT PROFILE</button><button id="newPost">＋ CREATE POST</button></aside><section><header><h2>For You</h2><span>posts, not videos.</span></header><div id="feed"></div></section></div></section>
+
+<section id="auth" class="screen">
+  <div class="logo">
+    <img class="l" src="hn.png" alt="">
+  </div>
+
+  <h1>We trust that you are honest.</h1>
+  <p>No passwords. Just trust.</p>
+
+  <form id="login">
+    <label>Username</label>
+    <input id="loginUser" required>
+
+    <button>LOGIN</button>
+
+    <button type="button" class="link" id="signupOpen">
+      Doesn't have an account? <b>Create one</b>
+    </button>
+  </form>
+</section>
+
+
+<section id="signup" class="screen hidden">
+  <div class="logo">
+    <img class="l" src="hn.png" alt="">
+  </div>
+
+  <h1>Create your completely secure account</h1>
+
+  <form id="signupForm">
+    <label>Name</label>
+    <input id="name" required maxlength="50">
+
+    <label>Username</label>
+    <input id="username" required pattern="[A-Za-z0-9_]+" maxlength="30">
+
+    <button>SIGN-IN</button>
+
+    <button type="button" class="link" id="back">‹ Back</button>
+  </form>
+</section>
+
+
+<section id="app" class="hidden">
+
+  <nav>
+    <div class="logo small">
+      <img class="ll" src="hn.png" alt="">
+    </div>
+
+    <button class="ghost" id="logout">
+      LOG OUT
+    </button>
+  </nav>
+
+  <div class="layout">
+
+    <aside>
+      <div id="profile"></div>
+
+      <button id="editProfile">
+        EDIT PROFILE
+      </button>
+
+      <button id="newPost">
+        ＋ CREATE POST
+      </button>
+    </aside>
+
+    <section>
+      <header>
+        <h2>For You</h2>
+        <span>We trust you.</span>
+      </header>
+
+      <div id="feed"></div>
+    </section>
+
+  </div>
+</section>
+
 </main>
-<dialog id="profileDialog"><form id="profileForm"><button type="button" class="x" id="closeProfile">×</button><h2>Edit profile</h2><label>Name</label><input id="pName"><label>Username</label><input id="pUser" pattern="[A-Za-z0-9_]+"><label>Bio</label><textarea id="pBio" maxlength="160"></textarea><label>PFP URL</label><input id="pPfp" type="url"><label>Banner URL</label><input id="pBanner" type="url"><label class="check"><input id="pVerify" type="checkbox"> 🔵 Verify your account with blue symbol</label><small>*We trust you are not doing this if you don't deserve it.</small><button>SAVE PROFILE</button></form></dialog>
-<dialog id="postDialog"><form id="postForm"><button type="button" class="x" id="closePost">×</button><h2>Create post</h2><label>Title</label><input id="postTitle" required maxlength="100"><label>Content</label><textarea id="postContent" required maxlength="5000"></textarea><label>Image URL (optional)</label><input id="postImage" type="url"><button>POST</button></form></dialog>
-<script src="app.js"></script></body></html>
+
+
+<dialog id="profileDialog">
+  <form id="profileForm">
+
+    <button type="button" class="x" id="closeProfile">×</button>
+
+    <h2>Edit profile</h2>
+
+    <label>Name</label>
+    <input id="pName">
+
+    <label>Username</label>
+    <input id="pUser" pattern="[A-Za-z0-9_]+">
+
+    <label>Bio</label>
+    <textarea id="pBio" maxlength="160"></textarea>
+
+    <label>PFP URL</label>
+    <input id="pPfp" type="url">
+
+    <label>Banner URL</label>
+    <input id="pBanner" type="url">
+
+    <label class="check">
+      <input id="pVerify" type="checkbox">
+      <i class="fa-solid fa-circle-check verified-badge"></i>
+      Verify your account with blue symbol
+    </label>
+
+    <small>
+      *We trust you are not doing this if you don't deserve it.
+    </small>
+
+    <button>SAVE PROFILE</button>
+
+  </form>
+</dialog>
+
+
+<dialog id="postDialog">
+  <form id="postForm">
+
+    <button type="button" class="x" id="closePost">×</button>
+
+    <h2>Create post</h2>
+
+    <label>Title</label>
+    <input id="postTitle" required maxlength="100">
+
+    <label>Content</label>
+    <textarea id="postContent" required maxlength="5000"></textarea>
+
+    <label>Image URL (optional)</label>
+    <input id="postImage" type="url">
+
+    <button>POST</button>
+
+  </form>
+</dialog>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>

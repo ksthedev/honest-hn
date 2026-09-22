@@ -69,7 +69,7 @@ async function profile() {
     <div class="profile">
       ${avatar(u)}
       <div>
-        <b>${esc(u.name)} ${u.verified ? "🔵" : ""}</b><br>
+        <b>${esc(u.name)} ${u.verified ? '<i class="fa-solid fa-circle-check verified-badge" title="Verified"></i>' : ""}</b><br>
         <span>@${esc(u.username)}</span>
       </div>
     </div>
@@ -111,7 +111,7 @@ async function feed() {
                   <div>
                     <b>
                       ${esc(u.name)}
-                      ${u.verified ? "🔵" : ""}
+                      ${u.verified ? '<i class="fa-solid fa-circle-check verified-badge" title="Verified"></i>' : ""}
                     </b>
                     <br>
                     <span>@${esc(u.username)}</span>
